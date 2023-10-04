@@ -1,16 +1,23 @@
 body {
   padding: 0;
   margin: 0;
+  background: #212534;
 }
 body #image-container {
   width: 95%;
   margin: 20px auto;
 }
 body #image-container img {
-  width: calc((100% - 30px) / 3);
+  width: calc((100% - 120px) / 3);
   height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 5px 5px 0;
+  margin: 20px;
   box-sizing: border-box;
+  opacity: 0.5;
+  transition: transform 1s, opacity 1s;
+}
+body #image-container img:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
