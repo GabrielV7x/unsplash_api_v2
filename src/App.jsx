@@ -17,10 +17,13 @@ function App() {
     for (let img in data) {
       console.log(data[img].urls.regular);
       const imageUrl = data[img].urls.regular;
+
       const image = document.createElement('img');
       image.src = imageUrl;
+      const afterContainer = document.createElement('span');
+      afterContainer.appendChild(image);
       const imageContainer = document.getElementById('image-container');
-      imageContainer.appendChild(image);
+      imageContainer.appendChild(afterContainer);
     }
   }
 
